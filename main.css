@@ -1,0 +1,263 @@
+#product-overview {
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+    url("images/freedom.jpg");
+    background-position: top;
+    background-size: cover;
+  height: 33vh;
+  margin-top: 58px;
+  position: relative;
+}
+
+
+
+#product-overview h1 {
+  color: white;
+  font-family: "Anton", sans-serif;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  font-size: 1.6rem;
+  animation-name:moveRight ;
+  animation-duration: 2s;
+}
+
+.section-title {
+  color: #2ddf5c;
+  text-align: center;
+}
+
+
+.plan {
+  background: #d5ffdc;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.plan--highlighted {
+  background: #19b84c;
+  color: white;
+}
+
+.plan__annotation {
+  background: white;
+  color: #19b84c;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858585;
+}
+
+.plan--highlighted .plan__title {
+  color: white;
+}
+
+.plan--highlighted .plan__price {
+  color: #0e4f1f;
+}
+
+.plan__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan__feature {
+  margin: 0.5rem 0;
+}
+
+
+
+#key-features {
+  background: #ff1b68;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+#key-features .section-title {
+  color: white;
+  margin: 2rem;
+}
+
+.key-feature__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+.key-feature__image {
+  background: #ffcede;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #424242;
+  border-radius: 50%;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.key-feature__description {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+.modal {
+  position: fixed;
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: all 0.5s ease-out;
+  z-index: 200;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  width: 70%;
+  top: 30%;
+  left: 15%;
+}
+
+.modal-show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
+
+
+
+
+@media (min-width:45rem) {
+
+  #product-overview{
+    height: 40vh;
+    background-position: 50% 25%;
+    margin-top: 56px;
+  }
+  #product-overview h1 {
+  
+    font-size: 3rem;
+
+  }
+
+}
+
+@media (min-width:60rem){
+
+  #product-overview{
+    height: 50vh;
+  }
+  #product-overview h1 {
+  
+    font-size: 4.5rem;
+
+  }
+}
+
+
+@media (min-width:45rem){
+
+  .plan__list {
+    min-width: 700px;
+    max-width: 1050px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+  }
+
+  .plan--highlighted {
+    
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal {
+    top: 20%;
+    left: 30%;
+    width: 40%;
+  }
+
+  .modal__title {
+    
+    font-size: 2rem;
+  }
+
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+  }
+  
+}
+
+
+  
+  @keyframes moveRight{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0.2;
+    }
+
+    90%{
+        transform: translateX(10%);
+        opacity: 0.5;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
